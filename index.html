@@ -12,15 +12,19 @@
 
 <style>
  a{text-decoration:none;
-    color:black;
+    color:white;
     
 }
- ul{list-style:none;
-    font-size:22px;
-    position:absolute;
-    visibility: hidden;
-    
-}
+
+ #myP{visibility:hidden;
+ position:absolute;
+ background-color:black;
+border:solid black 2px;
+font-size:20px;
+width:200px;}
+
+li{list-style:none;
+margin-top:7px;}
 .logo {
     padding:0px;
 }
@@ -78,16 +82,29 @@ background-color:black;
 .content{float:right;
     width:67%;
 }
-
+ 
+ 
 </style>
 </head>
 <body>
 
-<ul id="menu">
-    <li>
-        <a href="#"><img src='menu.png' style="width:40px;height:auto; margin-left:-45px;"></a>
-        <ul>
-            <li><a href="#">News</a></li>
+
+        <button type="button"  style="border:none; background-color:white;" onmouseover="myFunction()" onmouseout="myFunction1()"><img src="menu.png" style="width:40px; height:auto;"></button>
+  
+
+
+<script>
+function myFunction() {
+    document.getElementById("myP").style.visibility = "visible";
+}
+
+function myFunction1() {
+    document.getElementById("myP").style.visibility = "hidden";
+}
+</script>
+<div id='myP'>
+        <ul >
+            <li ><a href="#">News</a></li>
             <li><a href="#">Home Page</a></li>
             <li><a href="#">World</a></li>
             <li><a href="#">Politics</a></li>
@@ -105,13 +122,9 @@ background-color:black;
             <li><a href="#">Education</a></li>
             <li><a href="#">Fashion&Style</a></li>
             <li><a href="#">Health</a></li>
-            
-            
-            
+           
         </ul>
-    </li>
-   
-</ul>
+    </div>
     
 <div class="logo">
     
