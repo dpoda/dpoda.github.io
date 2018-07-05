@@ -12,16 +12,23 @@
 
 <style>
  a{text-decoration:none;
-    color:white;
-    
-}
+    color:black; }
 
+    li b {font-size:22px;}
+li{border-top:solid black 1px;
+padding:8px;
+margin-top:0px;
+margin-left:-35px;
+
+width:180px;}
+#button{margin-left:10px;}
+.lastli{border-bottom:solid black 1px;}
  #myP{visibility:hidden;
  position:absolute;
- background-color:black;
-border:solid black 2px;
-font-size:20px;
-width:200px;}
+ background-color:white;
+font-size:19px;
+width:220px;
+margin-top:-10px;}
 
 li{list-style:none;
 margin-top:7px;}
@@ -89,39 +96,36 @@ background-color:black;
 <body>
 
 
-        <button type="button"  style="border:none; background-color:white;" onmouseover="myFunction()" onmouseout="myFunction1()"><img src="menu.png" style="width:40px; height:auto;"></button>
+        <button type="button" id="button" style="border:none; background-color:white;" onclick="myFunction()" onmouseout="myFunction1()"><img src="menu.png" style="width:40px; height:auto;"></button>
   
 
 
 <script>
 function myFunction() {
     document.getElementById("myP").style.visibility = "visible";
+    document.getElementById("button").style.position = "absolute";
 }
 
 function myFunction1() {
     document.getElementById("myP").style.visibility = "hidden";
 }
+
 </script>
-<div id='myP'>
+<div id='myP' onmouseover="myFunction()" onmouseout="myFunction1()">
         <ul >
-            <li ><a href="#">News</a></li>
+            <li ><a href="#"><b>News</b></a></li>
             <li><a href="#">Home Page</a></li>
             <li><a href="#">World</a></li>
             <li><a href="#">Politics</a></li>
-            <li><a href="#">Bussines</a></li>
             <li><a href="#">EU</a></li>
-            <li><a href="#">Arts</a></li>
-            <li><a href="#">Today's Arts</a></li>
+            <li><a href="#"<a><b>Arts</b></a></li>
             <li><a href="#">Art&Design</a></li>
             <li><a href="#">Books</a></li>
             <li><a href="#">Movies</a></li>
-            <li><a href="#">Living</a></li>
+            <li><a href="#"><b>Living</b></a></li>
             <li><a href="#">Automobiles</a></li>
-            <li><a href="#">CrossWord</a></li>
-            <li><a href="#">Food</a></a></li>
             <li><a href="#">Education</a></li>
-            <li><a href="#">Fashion&Style</a></li>
-            <li><a href="#">Health</a></li>
+            <li class="lastli"><a href="#">Fashion&Style</a></li>
            
         </ul>
     </div>
@@ -132,8 +136,8 @@ function myFunction1() {
    
 </div>
     <div class='soc'>
-     <div class='vk'>   <img src="vk1.jpg">  </div> 
-       <div class='soc'> <img src="inst.png"> </div> 
+     <div class='vk'> <img src="vk1.jpg"> </div> 
+       <div ><a class='soc' href="https://www.instagram.com/hnatiiuk/" > <img  src="inst.png"></a> </div> 
         <div class='soc'><img src="tel.png">  </div> 
         <div class='soc'><img src="twitter.jpg"> </div> 
         <div class='soc'><img src="you.jpg"> </div> 
